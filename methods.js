@@ -31,3 +31,31 @@ str.includes('a ma x') // false
 str.includes('') // true !
 
 '*'.repeat(10) // '**********'
+
+// OBJECTS (static)
+
+const obj1 = {
+  a: 1,
+  b: true,
+  c: 'hello',
+  d: () => null,
+  e: {}
+}
+
+Object.keys(obj1);
+Object.values(obj1);
+
+const array1 = [5,10,15,20];
+
+Object.keys(array1); // tablica stringów !
+Object.values(array1); // dokładnie ta sama tablica
+
+
+const obj2 = {
+  a: 1,
+  b: 2,
+  [Symbol()]: 3,
+}
+
+const s1 = Symbol();
+const s2 = Symbol();
