@@ -48,9 +48,8 @@ promise
   .then(console.log);
   */
 
-const p2 = fetch('https://reqres.in/api/users/2');
-const p3 = fetch('https://reqres.in/api/users/3');
-const p4 = fetch('https://reqres.in/api/users/4');
+/*
+*/
 
 /*
 p2.then(res => res.json()).then(console.log);
@@ -75,3 +74,31 @@ console.log(firstPromsie);
 
 firstPromsie.then(console.log);
 */
+
+// const promise = fetch('https://reqres.in/api/users/2');
+// return promise.then(res => res.json());
+
+function getUser0() {
+  fetch('https://reqres.in/api/users/2')
+    .then(res => res.json())
+    .then(json => json.data)
+    .then(console.log);
+}
+
+async function getUser() {
+  const res = await fetch('https://reqres.in/api/users/2');
+  const json = await res.json();
+  const data = json.data;
+  console.log(data);
+}
+
+const p2 = fetch('https://reqres.in/api/users/2');
+const p3 = fetch('https://reqres.in/api/users/3');
+const p4 = fetch('https://reqres.in/api/users/4');
+
+async function getUsers() {
+  const allResponse = await Promise.all([p2, p3, p4]);
+  console.log(allResponse);
+}
+
+getUsers();
