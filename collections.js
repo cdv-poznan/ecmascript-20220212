@@ -57,3 +57,28 @@ Array.from(set.values());
 set instanceof Set; // true
 map instanceof Map; // true
 array1 instanceof Array; // true
+
+// for...in (iterowanie po właściwościach obiektów)
+
+const object3 = {
+  a: 1,
+  b: 2,
+  c: 3,
+  d: 4,
+};
+
+for (const prop in object3) {
+  // console.log(prop);
+}
+
+// for...of
+
+const array3 = [1,2,3,4,5];
+
+for (const element of map.entries()) {
+  console.log(element);
+}
+
+for (const letter of 'Hello!') {
+  console.log(letter);
+}
